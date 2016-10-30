@@ -37,6 +37,7 @@ public class RetanguloActivity extends AppCompatActivity {
         abridor.putExtra("Codigo",codigo);
 
         startActivity(abridor);
+        finish();
 
     }
 

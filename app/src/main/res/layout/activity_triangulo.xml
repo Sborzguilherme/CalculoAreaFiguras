@@ -13,13 +13,13 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Dados do Triângulo(cm)"
+        android:text="@string/dados_do_triangulo_cm"
         style="@style/MensagemInicialTelasFiguras"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Base"
+        android:text="@string/base"
         android:layout_marginTop="@dimen/Telas_2_medidas_TV1"
         style="@style/FonteMedidas"/>
 
@@ -33,7 +33,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Altura"
+        android:text="@string/altura"
         android:layout_marginTop="@dimen/Telas_2_medidas_TV2"
         style="@style/FonteMedidas"/>
 
@@ -47,12 +47,13 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Avançar"
+        android:text="@string/avancar"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:onClick="cliqueAvancarTriangulo"
         android:backgroundTint="#8B0000"
         android:textColor="#FFFFFF"
+        
         />
 
 

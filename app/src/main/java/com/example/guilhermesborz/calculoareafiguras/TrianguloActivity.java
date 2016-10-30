@@ -35,7 +35,9 @@ public class TrianguloActivity extends AppCompatActivity {
 
         abridor.putExtra("Resultado",resultado);
         abridor.putExtra("Codigo",codigo);
+
         startActivity(abridor);
+        finish();
 
     }
 }

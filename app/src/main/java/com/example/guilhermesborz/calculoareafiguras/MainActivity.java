@@ -29,11 +29,11 @@ public class MainActivity extends AppCompatActivity {
         int idRBSelecionado = rgFigura.getCheckedRadioButtonId();
         RadioButton opcaoSelecionada = (RadioButton) findViewById(idRBSelecionado);
 
-        if(opcaoSelecionada.getText().toString().equals("Retangulo")){
+        if(opcaoSelecionada.getText().toString().equals("Retângulo")){
             Intent abridor = new Intent(this, RetanguloActivity.class);
             startActivity(abridor);
 
-        }else if(opcaoSelecionada.getText().toString().equals("Triangulo")){
+        }else if(opcaoSelecionada.getText().toString().equals("Triângulo")){
             Intent abridor = new Intent(this, TrianguloActivity.class);
             startActivity(abridor);
 
@@ -41,9 +41,6 @@ public class MainActivity extends AppCompatActivity {
             Intent abridor = new Intent(this, CirculoActivity.class);
             startActivity(abridor);
         }
-
-
-
 
     }
 }

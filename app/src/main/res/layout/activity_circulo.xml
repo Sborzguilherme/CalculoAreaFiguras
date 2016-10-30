@@ -13,13 +13,13 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Dados do Círculo(cm)"
+        android:text="@string/dados_do_circulo_cm"
         style="@style/MensagemInicialTelasFiguras"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Raio"
+        android:text="@string/raio"
         android:layout_marginTop="@dimen/Telas_2_medidas_TV1"
         style="@style/FonteMedidas"/>
 
@@ -34,7 +34,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Avançar"
+        android:text="@string/avancar"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:onClick="cliqueAvancarCirculo"

@@ -23,7 +23,7 @@ public class ResultadoFinalActivity extends AppCompatActivity {
         ImageView imEscolhefigura = (ImageView)findViewById(R.id.imEscolhefigura);
 
         if(recebeCodigo.equals("Retângulo")){
-            imEscolhefigura.setImageResource(R.drawable.quadrado);
+            imEscolhefigura.setImageResource(R.drawable.retangulo);
 
         }else if(recebeCodigo.equals("Círculo")){
             imEscolhefigura.setImageResource(R.drawable.circulo);
@@ -32,10 +32,9 @@ public class ResultadoFinalActivity extends AppCompatActivity {
         }
     }
 
-
-
     public void cliqueVoltar(View origemDoClique){
         Intent abridor = new Intent(this.getApplicationContext(), MainActivity.class);
         startActivity(abridor);
+        finish();
     }
 }

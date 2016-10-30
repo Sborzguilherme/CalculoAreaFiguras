@@ -7,4 +7,5 @@
     <dimen name="Telas_2_medidas_TV2">140dp</dimen>
     <dimen name="Telas_2_Medidas_ED2">180dp</dimen>
 
+    <dimen name="TextSize">25sp</dimen>
 </resources>

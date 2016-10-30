@@ -32,7 +32,9 @@ public class CirculoActivity extends AppCompatActivity {
 
         abridor.putExtra("Resultado",areaCirculo);
         abridor.putExtra("Codigo",codigo);
+
         startActivity(abridor);
+        finish();
 
     }
 
