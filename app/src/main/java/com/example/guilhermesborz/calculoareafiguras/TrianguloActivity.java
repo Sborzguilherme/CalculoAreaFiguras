@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class TrianguloActivity extends AppCompatActivity {
 
@@ -25,19 +26,23 @@ public class TrianguloActivity extends AppCompatActivity {
         Intent abridor = new Intent(this.getApplicationContext(), ResultadoFinalActivity.class);
         String codigo = "Triângulo";
 
-        String valorAltura = edAlturaT.getText().toString();
-        String valorBase = edBaseT.getText().toString();
+        if(edAlturaT.getText().toString().isEmpty()|| edBaseT.getText().toString().isEmpty()){
+            Toast.makeText(TrianguloActivity.this.getApplicationContext(), "Insira Valor", Toast.LENGTH_SHORT).show();
+        }else{
 
-        Float altura = Float.parseFloat(valorAltura);
-        Float base = Float.parseFloat(valorBase);
+            String valorAltura = edAlturaT.getText().toString();
+            String valorBase = edBaseT.getText().toString();
 
-        Float resultado = (altura * base)/2;
+            Float altura = Float.parseFloat(valorAltura);
+            Float base = Float.parseFloat(valorBase);
 
-        abridor.putExtra("Resultado",resultado);
-        abridor.putExtra("Codigo",codigo);
+            Float resultado = (altura * base)/2;
 
-        startActivity(abridor);
-        finish();
+            abridor.putExtra("Resultado",resultado);
+            abridor.putExtra("Codigo",codigo);
+
+            startActivity(abridor);
+        }
 
     }
 }

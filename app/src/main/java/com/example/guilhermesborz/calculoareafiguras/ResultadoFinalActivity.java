@@ -34,7 +34,10 @@ public class ResultadoFinalActivity extends AppCompatActivity {
 
     public void cliqueVoltar(View origemDoClique){
         Intent abridor = new Intent(this.getApplicationContext(), MainActivity.class);
+        abridor.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(abridor);
+
         finish();
+
     }
 }

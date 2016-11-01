@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class CirculoActivity extends AppCompatActivity {
 
@@ -23,18 +24,19 @@ public class CirculoActivity extends AppCompatActivity {
         Intent abridor = new Intent(this.getApplicationContext(), ResultadoFinalActivity.class);
         String codigo = "Círculo";
 
+            if(edRaio.getText().toString().isEmpty()) {
+                Toast.makeText(CirculoActivity.this.getApplicationContext(), "Insira Valor", Toast.LENGTH_SHORT).show();
+            }else {
+                String valor = edRaio.getText().toString();
+                Float valorEmFloat = Float.parseFloat(valor);
+                float areaCirculo = (float) (Math.PI * Math.pow(valorEmFloat, 2));
 
-        String valor = edRaio.getText().toString();
-        Float valorEmFloat = Float.parseFloat(valor);
-
-        float areaCirculo = (float) (3.14159*Math.pow(valorEmFloat,2));
+                abridor.putExtra("Resultado", areaCirculo);
+                abridor.putExtra("Codigo", codigo);
 
 
-        abridor.putExtra("Resultado",areaCirculo);
-        abridor.putExtra("Codigo",codigo);
-
-        startActivity(abridor);
-        finish();
+                startActivity(abridor);
+            }
 
     }
 

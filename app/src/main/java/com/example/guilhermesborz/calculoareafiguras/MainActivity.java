@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,20 +28,30 @@ public class MainActivity extends AppCompatActivity {
         startActivity(abridor);*/
 
         int idRBSelecionado = rgFigura.getCheckedRadioButtonId();
-        RadioButton opcaoSelecionada = (RadioButton) findViewById(idRBSelecionado);
 
-        if(opcaoSelecionada.getText().toString().equals("Retângulo")){
-            Intent abridor = new Intent(this, RetanguloActivity.class);
-            startActivity(abridor);
-
-        }else if(opcaoSelecionada.getText().toString().equals("Triângulo")){
-            Intent abridor = new Intent(this, TrianguloActivity.class);
-            startActivity(abridor);
+        if(idRBSelecionado == -1){
+            Toast.makeText(MainActivity.this.getApplicationContext(), "Selecione uma opção", Toast.LENGTH_SHORT).show();
 
         }else{
-            Intent abridor = new Intent(this, CirculoActivity.class);
-            startActivity(abridor);
+
+            RadioButton opcaoSelecionada = (RadioButton) findViewById(idRBSelecionado);
+
+            if(opcaoSelecionada.getText().toString().equals("Retângulo")){
+                Intent abridor = new Intent(this, RetanguloActivity.class);
+                startActivity(abridor);
+
+            }else if(opcaoSelecionada.getText().toString().equals("Triângulo")){
+                Intent abridor = new Intent(this, TrianguloActivity.class);
+                startActivity(abridor);
+
+            }else{
+                Intent abridor = new Intent(this, CirculoActivity.class);
+                startActivity(abridor);
+            }
+
         }
+
+
 
     }
 }
